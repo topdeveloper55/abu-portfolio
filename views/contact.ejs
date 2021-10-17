@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ./partials/header %>
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation-->
+    <% include ./partials/navmenu %>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">
+          Contact Me
+        </h2>
+        <hr class="star-dark mb-5" />
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <h3 class="text-center text-primary mb-0">
+              My Contact Information
+            </h3>
+            <hr class="mb-5" />
+            <div class="mb-4">
+              <p class="text-center text-success mb-0 fs-4">
+                Address:
+              </p>
+              <p class="text-center text-danger mb-0 fs-6">
+                198 West 21th Street, Suite 721 Scarborough, Canada
+              </p>
+            </div>
+            <div class="mb-4">
+              <p class="text-center text-success mb-0 fs-4">
+                Contact Number:
+              </p>
+              <p class="text-center text-danger mb-0 fs-6">
+                + 1235 2355 98
+              </p>
+            </div>
+            <div class="mb-4">
+              <p class="text-center text-success mb-0 fs-4">
+                Email Address:
+              </p>
+              <p class="text-center text-danger mb-0 fs-6">
+                zobaer1979@gmail.com
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mx-auto">
+            <h3 class="text-center text-primary mb-0">Send Me Message</h3>
+            <hr class="mb-5" />
+            <form
+              name="sentMessage"
+              id="contactForm"
+              action="/thanks"
+              method="POST"
+            >
+              <div class="mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  class="form-control"
+                  id="firstName"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  class="form-control"
+                  id="lastName"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="contactNumber" class="form-label"
+                  >Contact Number</label
+                >
+                <input
+                  type="text"
+                  name="contactNumber"
+                  class="form-control"
+                  id="contactNumber"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="emailAddress" class="form-label"
+                  >Email Address</label
+                >
+                <input
+                  type="text"
+                  name="emailAddress"
+                  class="form-control"
+                  id="emailAddress"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text">
+                  I'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="3"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <% include ./partials/footer %>
+  </body>
+</html>
