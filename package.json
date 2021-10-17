@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/*.spec.js --exit",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "dev": "nodemon server"
   },
   "eslintConfig": {
