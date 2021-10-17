@@ -9,21 +9,54 @@
     <% include ./partials/navmenu %>
 
     <!--Header-->
-    <header class="masthead bg-success text-white text-center" style="padding-top: 30;">
+    <header
+      class="masthead bg-success text-white"
+      style="padding-top: 30"
+    >
       <div class="container">
-        <span style="font-size: 120px;"> </span>
-        <img
-          class="rounded-circle"
-          src="/static/img/portfolio/avatar.png"
-          alt="avatar"
-        />
-        <h1 class="text-uppercase mb-0">Abu Sayed Mohammad Zobaer</h1>
-        <hr class="star-light" />
-        <h2 class="font-weight-light mb-0">Web Developer</h2>
-        <p>I am a web developer who has strong experiences in web development<p>
-        <p>Experience: Software Development, Web Designing, Web Marketing, Art & Creative Director, Wordpress Development</p>
+        <div class="row">
+          <div class="col text-center">
+            <img
+              class="rounded-circle"
+              src="/static/img/portfolio/avatar.png"
+              alt="avatar"
+              height="300"
+            />
+            <hr />
+            <ul class="">
+              <li class="d-flex mb-1"><span class="fs-5 w-25">Name:</span>&nbsp;&nbsp; <span class="fs-5">Abu Sayed Mohammad Zobaer</span></li>
+              <li class="d-flex mb-1"><span class="fs-5 w-25">Birth Day:</span> &nbsp;&nbsp; <span class="fs-5"
+                  style="font-size: 14px">November 28,1980</span></li>
+              <li class="d-flex mb-1"><span class="fs-5 w-25">Address: </span> &nbsp;&nbsp; <span class="fs-5">Scarborough, Toronto, Canada</span></li>
+              <li class="d-flex mb-1"><span class="fs-5 w-25">Zip code: </span> &nbsp;&nbsp; <span class="fs-5">M1L4P6</span></li>
+              <li class="d-flex mb-1"><span class="fs-5 w-25">Email: </span> &nbsp;&nbsp; <span class="fs-5">zobaer1979@gmail.com</span></li>
+              <li class="d-flex mb-1"><span class="fs-5 w-25">Phone: </span> &nbsp;&nbsp; <span class="fs-5">+1-2234-5678-9-0</span></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3 class="text-uppercase text-center">About me</h3>
+            <hr class="star-light" />
+            <p class="fs-5" >
+              Welcome to my place of passion. 
+              I am a web developer who has more than 5 years of experiences.
+              Programming is not only my passion but is something that 
+              I developed over time with great effort. 
+              I am driven by my insatiable fascination for Computers 
+              I learn something new every day as 
+              there is so much yet to learn.             
+            </p>
+            <p class="fs-5">
+              Experience: Software Development, Web Designing, Web Marketing,
+              Art & Creative Director, Wordpress Development
+            </p>
+            <hr />
+            <br />
+            <a href="/static/Resume.pdf" target="_blank" class="btn btn-danger py-3 px-3">Download Resume</a>
+            
+          </div>
+        </div>
       </div>
-    </header>   
+    </header>
 
     <!--Footer-->
     <% include ./partials/footer %>
