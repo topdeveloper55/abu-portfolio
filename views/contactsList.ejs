@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ./partials/header %>
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation-->
+    <% include ./partials/navmenu %>
+
+    <section id="contact">
+      <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Contact Name</th>
+              <th scope="col">Contact Number</th>
+              <th scope="col">Email Address</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%if (records.length >0){ %> <% records.forEach(function(row, i){ %>
+            <tr>
+              <td><%=i+1%></td>
+              <td><%= row.firstName %></td>
+              <td><%= row.contactNumber %></td>
+              <td><%= row.emailAddress %></td>
+              <td>
+                  <div class="d-flex">
+                <form
+                  name="updateContact"
+                  id="updateContact"
+                  action="/updateContact"
+                  method="POST"
+                >
+                  <input
+                    type="hidden"
+                    name="updateId"
+                    class="form-control"
+                    id="updateId"
+                    aria-describedby="emailHelp"
+                    value=<%=row._id%>
+                  />
+                  <button type="submit" class="btn btn-success">Update</button>
+                </form>
+                <form
+                  name="deleteContact"
+                  id="deleteContact"
+                  action="/deleteContact"
+                  method="POST"
+                >
+                  <input
+                    type="hidden"
+                    name="deleteId"
+                    class="form-control"
+                    id="deleteId"
+                    aria-describedby="emailHelp"
+                    value=<%=row._id%>
+                  />
+                  <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+                </div>
+              </td>
+            </tr>
+            <% })}else{ %>
+            <tr>
+              <td colspan="6">No Record Found</td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <% include ./partials/footer %>
+  </body>
+</html>

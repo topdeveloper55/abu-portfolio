@@ -11,49 +11,26 @@
     <section id="contact">
       <div class="container">
         <h2 class="text-center text-uppercase text-secondary mb-0">
-          Contact Me
+          Update Contact
         </h2>
-        <hr class="star-dark mb-5" />
+        <hr class="star-dark mb-3" />
         <div class="row">
-          <div class="col-md-6 mx-auto">
-            <h3 class="text-center text-primary mb-0">
-              My Contact Information
-            </h3>
-            <hr class="mb-5" />
-            <div class="mb-4">
-              <p class="text-center text-success mb-0 fs-4">
-                Address:
-              </p>
-              <p class="text-center text-danger mb-0 fs-6">
-                198 West 21th Street, Suite 721 Scarborough, Canada
-              </p>
-            </div>
-            <div class="mb-4">
-              <p class="text-center text-success mb-0 fs-4">
-                Contact Number:
-              </p>
-              <p class="text-center text-danger mb-0 fs-6">
-                + 1235 2355 98
-              </p>
-            </div>
-            <div class="mb-4">
-              <p class="text-center text-success mb-0 fs-4">
-                Email Address:
-              </p>
-              <p class="text-center text-danger mb-0 fs-6">
-                zobaer1979@gmail.com
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 mx-auto">
-            <h3 class="text-center text-primary mb-0">Send Me Message</h3>
-            <hr class="mb-5" />
+          <div class="col-md-4 mx-auto"></div>
+          <div class="col-md-4 mx-auto">
             <form
-              name="sentMessage"
-              id="contactForm"
-              action="/contact"
+              name="updateExec"
+              id="updateExec"
+              action="/updateExec"
               method="POST"
             >
+                <input
+                type="hidden"
+                name="updateId"
+                class="form-control"
+                id="updateId"
+                aria-describedby="emailHelp"
+                value=<%=contact._id%>
+                />
               <div class="mb-3">
                 <label for="firstName" class="form-label">First Name</label>
                 <input
@@ -62,6 +39,7 @@
                   class="form-control"
                   id="firstName"
                   aria-describedby="emailHelp"
+                  value=<%=contact.firstName%>
                 />
               </div>
               <div class="mb-3">
@@ -72,6 +50,7 @@
                   class="form-control"
                   id="lastName"
                   aria-describedby="emailHelp"
+                  value=<%=contact.lastName%>
                 />
               </div>
               <div class="mb-3">
@@ -84,6 +63,7 @@
                   class="form-control"
                   id="contactNumber"
                   aria-describedby="emailHelp"
+                  value=<%=contact.contactNumber%>
                 />
               </div>
               <div class="mb-3">
@@ -96,10 +76,8 @@
                   class="form-control"
                   id="emailAddress"
                   aria-describedby="emailHelp"
+                  value=<%=contact.emailAddress%>
                 />
-                <div id="emailHelp" class="form-text">
-                  I'll never share your email with anyone else.
-                </div>
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
@@ -108,12 +86,36 @@
                   id="message"
                   name="message"
                   rows="3"
-                ></textarea>
+                  value=<%=contact.message%>
+                ></textarea
+                >
               </div>
-
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <div class="d-flex justify-content-around">
+                <button type="submit" class="btn btn-primary mr-2">Update</button>
+                <a class="btn btn-secondary" href="/contactsList">Cancel</a>
+              </div>
             </form>
+            <br />
+            <div class="text-center">
+                <form
+                    name="deleteContact"
+                    id="deleteContact"
+                    action="/deleteContact"
+                    method="POST"
+                >
+                    <input
+                        type="hidden"
+                        name="deleteId"
+                        class="form-control"
+                        id="deleteId"
+                        aria-describedby="emailHelp"
+                        value=<%=contact._id%>
+                    />
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
           </div>
+          <div class="col-md-4 mx-auto"></div>
         </div>
       </div>
     </section>
