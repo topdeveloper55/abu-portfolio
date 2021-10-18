@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 require("dotenv").config();
 
 const MongoDBURI = process.env.MONGO_URI
-mongoose.connect(MongoDBURI, {
+mongoose.connect("mongodb+srv://joaqperalta:rym199918@cluster0.fu30y.mongodb.net/myFirstDatabase?retryWrites=true", {
   useUnifiedTopology: true,
   useNewUrlParser: true
 }, (err) => {
