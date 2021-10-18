@@ -1,5 +1,5 @@
 {
-  "name": "node200-ejs-portfolio",
+  "name": "sayed-zobaer-portfolio",
   "version": "0.1.0",
   "engines": {
     "node": "14.15.0"
@@ -30,16 +30,7 @@
       "plugin:jsx-a11y/recommended"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/travezripley/node200-ejs-portfolio.git"
-  },
-  "author": "Travis Ripley <Theripleys@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/travezripley/node200-ejs-portfolio/issues"
-  },
-  "homepage": "https://github.com/travezripley/node200-ejs-portfolio#readme",
+  "author": "Sayed Zobaer <zobaer1979@gmail.com>",
   "dependencies": {
     "axios": "^0.23.0",
     "body-parser": "^1.19.0",
